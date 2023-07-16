@@ -1,15 +1,23 @@
 import getContents from '@/actions/getContents';
 import Header from '../../components/Header';
 import PageContent from './components/PageContent';
+import getPostMetadata from '@/utils/getPostMetadata';
+import PostPreview from '@/components/PostPreview';
 
 export const revalidate = 0;
 
 export default async function Home() {
   const contents = await getContents()
 
+  const postMetadata = getPostMetadata();
+  const postPreviews = postMetadata.map((post) => (
+    <PostPreview key={post.slug} {...post} />
+  ));
+
+
   return (
     <div className=" bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto">
-      <Header>
+      {/* <Header>
         <div className="mb-2">
           <h1
             className="
@@ -20,16 +28,23 @@ export default async function Home() {
             Welcome back
           </h1>
         </div>
-      </Header>
+      </Header> */}
       <div className="mt-2 mb-7 px-6">
         <div className="flex justify-between items-center">
           <h1 className="text-white text-2xl font-semibold">
-            Newest Info
+            お知らせ
           </h1>
         </div>
         <PageContent contents={contents} />
+        <div className="text-center pt-10">
+          <h1 className="text-white text-2xl font-semibold pb-4">
+            コンテンツ
+          </h1>
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">{postPreviews}</div>
+        </div>
       </div>
     </div>
   )
 }
+
 

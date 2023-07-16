@@ -39,7 +39,7 @@ const Header: FC<HeaderProps> = ({ children, className }) => {
     }
   }
   return (
-    <div className={twMerge(`h-fit bg-gradient-to-b from-violet-900 p-6`, className)}>
+    <div className={twMerge(`h-fit p-6`, className)}>
       <div className="w-full mb-4 flex items-center justify-between">
         <div className="
           hidden gap-x-2 items-center

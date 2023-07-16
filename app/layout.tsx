@@ -10,6 +10,7 @@ import getContentsByUserId from '@/actions/getContentsByUserId'
 import Player from '@/components/Player'
 import getActiveProductsWithPrices from '@/actions/getActiveProductsWithPrices'
 
+export const revalidate = 0
 
 const font = Figtree({ subsets: ['latin'] })
 
@@ -17,8 +18,6 @@ export const metadata = {
   title: 'Spotify Clone is change for me',
   description: 'Welcome to Learn',
 }
-
-export const revalidate = 0
 
 export default async function RootLayout({
   children,

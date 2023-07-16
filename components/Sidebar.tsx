@@ -13,6 +13,8 @@ import Library from './Library';
 
 import { Content } from "@/types"
 import usePlayer from "@/hooks/usePlayer"
+import Header from "./Header";
+// import ThemeSwitch from "./ThemeSwitch";
 
 
 interface SidebarProps {
@@ -27,19 +29,19 @@ const Sidebar: FC<SidebarProps> = ({ children, contents }) => {
   const routes = useMemo(() => [
     {
       icon: HiHome,
-      label: 'Home',
+      label: 'ホーム',
       active: pathname === '/',
       href: '/',
     },
     {
       icon: BiSearch,
-      label: 'Search',
+      label: 'サイト内検索',
       active: pathname === '/search',
       href: '/search',
     },
     {
       icon: FcLike,
-      label: 'Like',
+      label: 'いいねしたコンテンツ',
       active: pathname === '/liked',
       href: '/liked',
     },
@@ -54,9 +56,13 @@ const Sidebar: FC<SidebarProps> = ({ children, contents }) => {
       )}>
       <div
         className="
-          hiddlen flex-col gap-y-2 bg-black h-full p-2
+          hiddlen flex-col gap-y-2 h-full p-2
           md: flex
       ">
+        <Box>
+          <div className="text-center p-4 text-3xl font-bold">カプコード</div>
+        </Box>
+
         <Box>
           <div className="flex flex-col gap-y-4 px-5 py-4">
             {routes.map((item) => (
@@ -74,7 +80,26 @@ const Sidebar: FC<SidebarProps> = ({ children, contents }) => {
       <main className="h-full flex-1 overflow-y-auto py-2 col-span-2">
         {children}
       </main>
-      <div>ナビゲーションバーになるところ</div>
+      <div
+        className="
+          hiddlen flex-col gap-y-2 h-full p-2
+          md: flex
+      ">
+        <Box>
+          <div className="flex flex-col gap-y-4">
+            {/* <ThemeSwitch /> */}
+            {/* {routes.map((item) => (
+              <SidebarItem
+                key={item.label}
+                {...item}
+              />
+            ))} */}
+            <Header className="rounded-lg">
+              {/* <div>aaaaa</div> */}
+            </Header>
+          </div>
+        </Box>
+      </div>
     </div>
   )
 }
