@@ -18,29 +18,41 @@ const PostPreview = (props: PostMetadata) => {
 
 
   const onClick = () => {
-    if (!user) {
+    if (props.subrcrive && !user) {
       return authModal.onOpen()
     }
 
-    if (!subscription) {
+    if (props.subrcrive && !subscription) {
       return subscribeModal.onOpen();
     }
 
-    if (user && subscription) {
+    if (props.subrcrive && user && subscription) {
       router.push(`/posts/${props.slug}`)
     }
   }
+
   return (
     <div
       className="border border-slate-300 p-4 rounded-md shadow-sm
     bg-white"
     >
-      <p className="text-sm text-slate-400">{props.date}</p>
-      <div
+      <div className="flex justify-between">
+        <div>{props?.subrcrive && <div className="text-sm text-slate-400">プレミアム限定のアイコン</div>}</div>
+        <p className="text-sm text-slate-400">{props.date}</p>
+      </div>
+      {props?.subrcrive ? <div
         className="cursor-pointer"
         onClick={onClick}>
         <h2 className=" text-violet-600 hover:underline mb-4">{props.title}</h2>
       </div>
+      :
+      <Link
+          href={`/posts/${props.slug}`}
+          className="cursor-pointer"
+        >
+          <h2 className=" text-violet-600 hover:underline mb-4">{props.title}</h2>
+        </Link>
+      }
       <p className="text-slate-700">{props.subtitle}</p>
     </div>
   );
