@@ -6,7 +6,12 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        sm: "518px",
+        md: "959px",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

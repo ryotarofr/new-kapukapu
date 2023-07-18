@@ -40,14 +40,21 @@ const Header: FC<HeaderProps> = ({ children, className }) => {
   }
   return (
     <div className={twMerge(`h-fit p-6`, className)}>
-      <div className="w-full mb-4 flex items-center justify-between">
+      <div className="
+      w-full mb-4 flex items-center justify-center
+  
+      ">
         <div className="
-          hidden gap-x-2 items-center
-          md:flex
+          md:flex md:items-center md:justify-center
           ">
-          <div className="flex justify-between items-center gapx-4">
+          <div className="
+          flex flex-col justify-center items-center gap-x-4
+          
+          ">
             {user ? (
-              <div className="flex gap-x-4 items-center">
+              <div className="
+              flex gap-y-2
+              xl:gap-x-4">
                 <Button
                   onClick={handleLogout}
                   className="bg-white px-6 py-2"

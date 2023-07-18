@@ -14,7 +14,7 @@ interface ContentItemProps {
   onClick: (id: string) => void
 }
 
-const COntentItem: FC<ContentItemProps> = ({ data, onClick }) => {
+const ContentItem: FC<ContentItemProps> = ({ data, onClick }) => {
   const imagePath = useLoadImage(data)
 
   return (
@@ -72,4 +72,4 @@ const COntentItem: FC<ContentItemProps> = ({ data, onClick }) => {
   )
 }
 
-export default COntentItem
+export default ContentItem

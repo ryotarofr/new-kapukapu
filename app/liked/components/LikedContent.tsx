@@ -19,11 +19,11 @@ const LikedContent: FC<LikedContentProps> = ({ contents }) => {
 
   const onPlay = useOnPlay(contents)
 
-  useEffect(() => {
-    if (!isLoading && !user) {
-      router.replace('/')
-    }
-  }, [isLoading, user, router])
+  // useEffect(() => {
+  //   if (!isLoading && !user) {
+  //     router.replace('/')
+  //   }
+  // }, [isLoading, user, router])
 
   if (contents.length === 0) {
     return (
@@ -32,7 +32,9 @@ const LikedContent: FC<LikedContentProps> = ({ contents }) => {
           flex 
           flex-col 
           gap-y-2 
-          w-full px-6 
+          w-full
+          pt-6
+          text-center
           text-neutral-400
         "
       >

@@ -15,8 +15,7 @@ export const revalidate = 0
 const font = Figtree({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Spotify Clone is change for me',
-  description: 'Welcome to Learn',
+  title: 'kapucode',
 }
 
 export default async function RootLayout({
@@ -28,7 +27,7 @@ export default async function RootLayout({
   const products = await getActiveProductsWithPrices()
 
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className={font.className}>
         <ToasterProvider />
         <SupabaseProvider>
