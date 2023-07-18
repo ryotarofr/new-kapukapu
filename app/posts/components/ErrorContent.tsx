@@ -1,7 +1,5 @@
 "use client";
 
-import Box from "@/components/Box";
-
 const ErrorContent = () => {
   return (
     <div className="h-full flex items-center justify-center mt-14">

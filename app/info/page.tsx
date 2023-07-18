@@ -1,6 +1,7 @@
 
 import getPostMetadata from '@/utils/getPostMetadata';
-import Infomation from '../components/Infomation';
+import Infomation from '../(site)/components/Infomation';
+
 
 const Info = () => {
 
