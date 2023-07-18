@@ -48,7 +48,7 @@ const NavigationModal = () => {
 
   useEffect(() => {
     onClose()
-  }, [pathname])
+  }, [pathname, onClose])
 
   return (
     <Modal
