@@ -45,3 +45,4 @@ Supabase types,sql commands(https://supabase.com/docs/guides/api/rest/generating
  これ:
  npx supabase gen types typescript --project-id "$PROJECT_REF" --schema public > types/supabase.ts
 # new-kapukapu
+# testsite
