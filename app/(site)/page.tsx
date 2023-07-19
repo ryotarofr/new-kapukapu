@@ -4,7 +4,8 @@ import { RiTerminalLine } from "react-icons/ri"
 import getContents from '@/actions/getContents';
 import getPostMetadata from '@/utils/getPostMetadata';
 import PostPreview from '@/components/PostPreview';
-import Infomation from './components/Infomation';
+import Infomation from '@/components/Infomation';
+
 
 
 export const revalidate = 0;
@@ -24,7 +25,7 @@ export default async function Home() {
   return (
     <div className="rounded-lg h-full w-full overflow-hidden overflow-y-auto">
       <div className="mt-8 mb-7">
-        <div className="flex justify-between items-center">
+        <div className="flex pl-10 items-center">
           <h1 className="text-white text-lg font-semibold">
             最近のお知らせ
           </h1>

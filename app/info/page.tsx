@@ -1,6 +1,6 @@
 
+import Infomation from '@/components/Infomation';
 import getPostMetadata from '@/utils/getPostMetadata';
-import Infomation from '../components/Infomation';
 
 
 

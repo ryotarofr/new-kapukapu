@@ -19,7 +19,7 @@ const Infomation = (props: PostMetadata) => {
         href={`/posts/${props.slug}`}
         className="cursor-pointer"
       >
-        <h2 className=" text-violet-600 hover:underline mb-4">{props.title}</h2>
+        <h2 className="text-blue-600 hover:underline mb-4">{props.title}</h2>
       </Link>
 
       <p className="text-slate-700">{props.subtitle}</p>
