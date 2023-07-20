@@ -11,6 +11,7 @@ import Player from '@/components/Player'
 import getActiveProductsWithPrices from '@/actions/getActiveProductsWithPrices'
 
 export const revalidate = 0
+export const dynamic = 'force-static'
 
 const font = Figtree({ subsets: ['latin'] })
 

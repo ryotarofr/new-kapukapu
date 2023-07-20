@@ -7,8 +7,8 @@ import PostPreview from '@/components/PostPreview';
 import Infomation from '@/components/Infomation';
 
 
-
 export const revalidate = 0;
+export const dynamic = 'force-static'
 
 export default async function Home() {
   const contents = await getContents()
