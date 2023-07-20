@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import PostContent from "../components/PostContent";
 import getPostMetadata from "@/utils/getPostMetadata";
 
+export const revalidate = 60
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";

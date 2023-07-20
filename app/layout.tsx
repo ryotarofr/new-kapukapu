@@ -10,7 +10,7 @@ import getContentsByUserId from '@/actions/getContentsByUserId'
 import Player from '@/components/Player'
 import getActiveProductsWithPrices from '@/actions/getActiveProductsWithPrices'
 
-export const revalidate = 0
+export const revalidate = 60
 export const dynamic = 'force-static'
 
 const font = Figtree({ subsets: ['latin'] })
